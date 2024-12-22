@@ -1,0 +1,111 @@
+:root {
+  --green: #0d1b1e;
+  --red: #52050a;
+  --light-color: #edf2ef;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.stopwatch-section {
+  background-color: var(--green);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.stopwatch-container {
+  width: 50%;
+  border: 10px solid var(--light-color);
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 50px 30px;
+  row-gap: 30px;
+}
+.stopwatch-container h1 {
+  font-size: 4rem;
+  letter-spacing: -6px;
+  font-weight: 600;
+  color: var(--light-color);
+  margin: 10px 0;
+  text-align: center;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+}
+.btn {
+  padding: 10px 5px;
+  color: var(--red);
+  background-color: var(--light-color);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 0;
+  width: 20%;
+}
+@media (hover: hover) {
+  .btn:hover {
+    box-shadow: 0px 0px 0px 3px var(--light-color) inset;
+    background-color: transparent;
+    color: var(--light-color);
+    transition: 0.5s ease-in-out;
+  }
+}
+@media (max-width: 820px) {
+  .stopwatch-container h1 {
+    font-size: 3.2rem;
+  }
+  .btns {
+    justify-content: center;
+    column-gap: 15px;
+  }
+  .btns .btn {
+    width: 100%;
+  }
+}
+@media (max-width: 670px) {
+  .stopwatch-container {
+    width: 60%;
+  }
+}
+@media (max-width: 560px) {
+  .stopwatch-container {
+    width: 70%;
+  }
+  .stopwatch-container h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 410px) {
+  .stopwatch-container {
+    width: 75%;
+    padding: 20px 5px;
+  }
+  .stopwatch-container h1 {
+    font-size: 2.6rem;
+  }
+  .btns {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .btns .btn {
+    width: 60%;
+  }
+}
+@media (max-width: 290px) {
+  .stopwatch-container h1 {
+    font-size: 2.2rem;
+  }
+}
